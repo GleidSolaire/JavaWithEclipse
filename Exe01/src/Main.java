@@ -59,7 +59,7 @@ public class Main {
 
 		int re = Exercicios.calculo(a, n, r);
 
-		System.out.printf("reultado do calculo: %.2f ", re);
+		System.out.println("reultado do calculo:  " +re);
 
 	}
 
