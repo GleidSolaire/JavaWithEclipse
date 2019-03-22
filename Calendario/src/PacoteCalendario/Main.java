@@ -1,10 +1,12 @@
 package PacoteCalendario;
 
+import java.util.ArrayList;
+
 public class Main {
 
 	public static void main(String[] args) {
 
-		String[] Opc = { "Ano Bissexto" };
+		String[] Opc = { "Ano Bissexto", "Mostrar Quantidade de dias no mes" };
 
 		boolean continua = true;
 
@@ -18,6 +20,9 @@ public class Main {
 				break;
 			case 2:
 
+				
+				ChamarMes();
+				
 				break;
 
 			case 3:
@@ -47,4 +52,16 @@ public class Main {
 
 	}
 
+	
+	public static void ChamarMes () {
+		
+		int mes = Console.recuperaInteiro("Informe o mes ");
+		int ano= Console.recuperaInteiro("Informe o ano");
+		ArrayList<Integer> diaDoMes = Calendario.CriarMes(mes, ano);
+		System.out.println(diaDoMes);
+		
+	}
+	
+	
+	
 }
