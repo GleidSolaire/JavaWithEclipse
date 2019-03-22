@@ -5,7 +5,7 @@ public class Main_2 {
 	
 	public static void main(String[] args) {
 
-		String[] Opc = { "Mostrar Vetor", "Mostrar Array"};
+		String[] Opc = { "Mostrar Vetor", "Mostrar Array", "Fibonacci Vetor e Fibonacci Array"};
 
 	
 		boolean continua = true;
@@ -21,8 +21,8 @@ public class Main_2 {
 				break;
 			case 2:
 			
-				ArrayList<Integer> array= criarVetorInteiros();
-				System.out.println(array);
+				//ArrayList<Integer> array= criarVetorInteiros();
+				//System.out.println(array);
 				
 				
 				
@@ -30,7 +30,10 @@ public class Main_2 {
 
 			case 3:
 
-		
+				
+				int [] fibovetor= CriarSerieFibonacci();
+				
+		        CriarSerieFibonacci();
 
 				break;
 
@@ -40,11 +43,31 @@ public class Main_2 {
 
 				System.out.println("Finaliza programa");
 
+				
 				break;
 			}
 
 		} while (continua);
 	}	
+	
+	
+	public static int[] CriarSerieFibonacci () {
+		
+		int quantidade = Console.recuperaInteiro("Informe qual o tamanho da serie que deseja exibir");
+		
+		int[] fiboVetor = Exercicios.CriaSerieFibonacci(quantidade);
+		System.out.println("vetor primitivo");
+		ImpVetorInteiro(fiboVetor);
+		System.out.println("Arraylist");
+		ArrayList<Integer> fiboArray = Exercicios.CriaSerieFibonacciAray(quantidade);
+		System.out.println(fiboArray);
+		return fiboVetor;
+	}
+	
+	
+	
+	
+	
 	
 	
 	
